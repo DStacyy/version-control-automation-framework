@@ -877,3 +877,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T20:49:34+07:00] feat: invented a solution for a problem I created
 
 - [2026-10-26T20:49:34+07:00] test: verified that the nonsense works
+
+- [2026-10-26T20:49:34+07:00] docs: this README has more ambition than the software
