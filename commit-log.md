@@ -589,3 +589,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T20:45:38+07:00] perf: productivity remains theoretical
 
 - [2026-10-26T20:45:39+07:00] fix: fixed the fix for the previous fix
+
+- [2026-10-26T20:45:39+07:00] chore: making absolutely sure this was unnecessary
