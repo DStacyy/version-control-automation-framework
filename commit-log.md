@@ -1655,3 +1655,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T21:39:58+07:00] feat: invented a solution for a problem I created
 
 - [2026-10-26T21:39:59+07:00] feat: the scoreboard fears me
+
+- [2026-10-26T21:39:59+07:00] docs: this README has more ambition than the software
