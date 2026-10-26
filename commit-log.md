@@ -613,3 +613,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T20:47:34+07:00] perf: productivity is a paid DLC
 
 - [2026-10-26T20:47:34+07:00] fix: the bug was actually a feature
+
+- [2026-10-26T20:47:34+07:00] perf: optimized the art of doing nothing
