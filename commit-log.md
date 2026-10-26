@@ -845,3 +845,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T20:49:30+07:00] feat: my commit history has more lore than my project
 
 - [2026-10-26T20:49:30+07:00] perf: productivity is a paid DLC
+
+- [2026-10-26T20:49:30+07:00] docs: source code sold separately
