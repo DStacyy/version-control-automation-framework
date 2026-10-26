@@ -1199,3 +1199,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T20:52:19+07:00] refactor: moved nothing to a different place
 
 - [2026-10-26T20:52:19+07:00] feat: added another green square to my empire
+
+- [2026-10-26T20:52:20+07:00] docs: documented my questionable decisions
