@@ -1747,3 +1747,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T21:40:18+07:00] docs: source code sold separately
 
 - [2026-10-26T21:40:19+07:00] fix: the developer was the bug all along
+
+- [2026-10-26T21:40:19+07:00] perf: productivity is a paid DLC
