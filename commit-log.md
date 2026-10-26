@@ -671,3 +671,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T20:47:45+07:00] refactor: renamed a variable and requested a promotion
 
 - [2026-10-26T20:47:45+07:00] feat: shipped absolutely zero useful features
+
+- [2026-10-26T20:47:45+07:00] docs: this README has more ambition than the software
