@@ -149,3 +149,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T20:03:46+07:00] test: verified that the nonsense works
 
 - [2026-10-26T20:03:46+07:00] perf: optimized the art of doing nothing
+
+- [2026-10-26T20:03:47+07:00] fix: fixed a problem nobody reported
