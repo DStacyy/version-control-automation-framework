@@ -1705,3 +1705,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T21:40:13+07:00] perf: productivity is a paid DLC
 
 - [2026-10-26T21:40:14+07:00] feat: implemented commitment issues
+
+- [2026-10-26T21:40:14+07:00] docs: documented my questionable decisions
