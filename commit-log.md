@@ -963,3 +963,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T20:49:48+07:00] test: verified that the nonsense works
 
 - [2026-10-26T20:49:48+07:00] fix: fixed the fix for the previous fix
+
+- [2026-10-26T20:49:49+07:00] docs: source code sold separately
