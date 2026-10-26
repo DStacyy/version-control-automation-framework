@@ -881,3 +881,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T20:49:34+07:00] docs: this README has more ambition than the software
 
 - [2026-10-26T20:49:34+07:00] chore: another commit another questionable decision
+
+- [2026-10-26T20:49:35+07:00] fix: fixed the fix for the previous fix
