@@ -1249,3 +1249,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T20:52:37+07:00] perf: optimized my commitment issues
 
 - [2026-10-26T20:52:37+07:00] perf: productivity is a paid DLC
+
+- [2026-10-26T20:52:38+07:00] fix: skill issue detected and ignored
