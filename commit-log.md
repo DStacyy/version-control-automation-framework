@@ -455,3 +455,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T20:24:20+07:00] docs: source code sold separately
 
 - [2026-10-26T20:24:21+07:00] docs: this commit explains itself poorly
+
+- [2026-10-26T20:24:21+07:00] docs: source code sold separately
