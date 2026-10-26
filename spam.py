@@ -7,7 +7,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 LOG_FILE = ROOT / "commit-log.md"
-MAX_BURST = 20
+MAX_BURST = 50
 
 MESSAGES = [
     "feat: added absolutely unnecessary innovation",
@@ -28,10 +28,35 @@ MESSAGES = [
     "docs: this commit explains itself poorly",
     "fix: the bug was actually a feature",
     "feat: added one more reason to open GitHub",
+    "feat: your productivity is my warm-up",
+    "fix: skill issue detected and ignored",
+    "perf: optimized my commitment issues",
+    "feat: added another green square to my empire",
+    "docs: trust me bro the code works",
+    "fix: fixed nothing and broke expectations",
+    "refactor: moved one line and called it architecture",
+    "feat: made my GitHub graph more employed than me",
+    "chore: another commit another questionable decision",
+    "perf: 100 commits closer to absolutely nowhere",
+    "feat: shipped absolutely zero useful features",
+    "fix: the developer was the bug all along",
+    "docs: source code sold separately",
+    "feat: my commit history has more lore than my project",
+    "test: works on my machine therefore it is production",
+    "refactor: renamed a variable and requested a promotion",
+    "feat: invented a solution for a problem I created",
+    "chore: HR has entered the chat",
+    "perf: productivity is a paid DLC",
+    "feat: outcommitted my own expectations",
+    "fix: replaced common sense with another commit",
+    "docs: this README has more ambition than the software",
+    "feat: the scoreboard fears me",
+    "chore: making absolutely sure this was unnecessary",
 ]
 
 
 def git(*args):
+
     result = subprocess.run(
         ["git", *args],
         cwd=ROOT,
