@@ -27,3 +27,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T19:51:43+07:00] fix: fixed the fix for the previous fix
 
 - [2026-10-26T19:51:43+07:00] feat: revolutionized absolutely nothing
+
+- [2026-10-26T19:51:44+07:00] docs: documented my questionable decisions
