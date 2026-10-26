@@ -1185,3 +1185,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T20:52:17+07:00] chore: another commit another questionable decision
 
 - [2026-10-26T20:52:17+07:00] feat: revolutionized absolutely nothing
+
+- [2026-10-26T20:52:18+07:00] docs: this README has more ambition than the software
