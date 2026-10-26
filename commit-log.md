@@ -1035,3 +1035,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-26T20:50:29+07:00] docs: source code sold separately
 
 - [2026-10-26T20:50:30+07:00] refactor: renamed a variable and requested a promotion
+
+- [2026-10-26T20:50:30+07:00] docs: documented my questionable decisions
