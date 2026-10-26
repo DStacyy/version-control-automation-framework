@@ -40,28 +40,28 @@ def git(*args):
     )
 
     if result.returncode != 0:
-        print(result.stderr.strip() or "Git command failed.")
-        raise SystemExit(result.returncode)
+        error = result.stderr.strip() or "Git command failed."
+        raise RuntimeError(error)
 
     return result.stdout.strip()
 
 
 def check_ready():
     if not (ROOT / ".git").exists():
-        sys.exit("ERROR: Git repository not initialized.")
+        raise RuntimeError("Git repository is not initialized.")
 
-    if not LOG_FILE.exists():
-        sys.exit("ERROR: commit-log.md is missing.")
+    if not LOG_FILE.is_file():
+        raise RuntimeError("commit-log.md is missing.")
 
     if git("status", "--porcelain"):
-        sys.exit(
-            "ERROR: Working tree is not clean.\n"
-            "Commit or stash your existing changes first."
+        raise RuntimeError(
+            "Working tree is not clean.\n"
+            "Commit, stash, or otherwise resolve your existing changes first."
         )
 
     branch = git("branch", "--show-current")
     if not branch:
-        sys.exit("ERROR: No branch is checked out.")
+        raise RuntimeError("No branch is currently checked out.")
 
     print(f"Repository: {ROOT.name}")
     print(f"Branch: {branch}")
@@ -72,25 +72,23 @@ def make_commit():
         timespec="seconds"
     )
     message = random.choice(MESSAGES)
+    entry = f"- [{timestamp}] {message}\n"
 
-    entry = (
-        f"\n- [{timestamp}] {message}\n"
-    )
-
-    with LOG_FILE.open("a", encoding="utf-8") as file:
-        file.write(entry)
-
-    git("add", "commit-log.md")
+    # Append one unique entry to the log.
+    with LOG_FILE.open("a", encoding="utf-8", newline="\n") as file:
+        file.write("\n" + entry)
 
     try:
+        git("add", "--", "commit-log.md")
         git("commit", "-m", message)
-    except SystemExit:
-        # Keep the working tree clean if the commit fails.
+
+    except RuntimeError:
+        # Unstage only our log file. Preserve its contents for recovery.
         subprocess.run(
             ["git", "reset", "--", "commit-log.md"],
             cwd=ROOT,
-            capture_output=True,
             text=True,
+            capture_output=True,
         )
         raise
 
@@ -109,39 +107,58 @@ def main():
     mode = sys.argv[1].lower()
 
     if mode == "daily":
+        if len(sys.argv) != 2:
+            raise RuntimeError("Usage: python spam.py daily")
         count = 1
+
     elif mode == "burst":
         if len(sys.argv) != 3:
-            sys.exit("Usage: python spam.py burst 10")
+            raise RuntimeError("Usage: python spam.py burst 10")
 
         try:
             count = int(sys.argv[2])
         except ValueError:
-            sys.exit("Count must be an integer.")
+            raise RuntimeError("Burst count must be an integer.")
 
         if not 1 <= count <= MAX_BURST:
-            sys.exit(
+            raise RuntimeError(
                 f"Choose a burst between 1 and {MAX_BURST}."
             )
+
     else:
-        sys.exit("Unknown mode. Use daily or burst.")
+        raise RuntimeError("Unknown mode. Use daily or burst.")
 
     check_ready()
 
     if mode == "burst":
         print(f"\nWARNING: about to create {count} commits.")
         confirm = input("Type YES to continue: ")
+
         if confirm != "YES":
-            print("Burst cancelled. Your graph survives another day.")
+            print("Burst cancelled. No commits were created.")
             return
 
-    for number in range(count):
-        print(f"\n[{number + 1}/{count}]")
-        make_commit()
+    completed = 0
 
-    print(f"\nDone. Created {count} commit(s).")
+    try:
+        for number in range(count):
+            print(f"\n[{number + 1}/{count}]")
+            make_commit()
+            completed += 1
+
+    except (RuntimeError, OSError) as error:
+        print(f"\nERROR: {error}")
+        print(f"Completed before failure: {completed}/{count}")
+        print("No automatic push was performed.")
+        raise SystemExit(1)
+
+    print(f"\nDone. Created {completed} commit(s).")
     print("Nothing has been pushed to GitHub yet.")
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except (RuntimeError, OSError) as error:
+        print(f"\nERROR: {error}")
+        raise SystemExit(1)
