@@ -1991,3 +1991,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-28T19:26:12+07:00] fix: fixed a problem nobody reported
 
 - [2026-10-28T19:26:13+07:00] docs: this commit explains itself poorly
+
+- [2026-10-28T19:26:13+07:00] fix: skill issue detected and ignored
