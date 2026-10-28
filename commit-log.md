@@ -1915,3 +1915,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-28T19:25:46+07:00] perf: productivity is a paid DLC
 
 - [2026-10-28T19:25:46+07:00] chore: another day another green square
+
+- [2026-10-28T19:25:47+07:00] docs: source code sold separately
