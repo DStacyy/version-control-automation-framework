@@ -1911,3 +1911,5 @@ in the field of doing things for no apparent reason.
 - [2026-10-28T19:25:45+07:00] feat: added another green square to my empire
 
 - [2026-10-28T19:25:46+07:00] fix: fixed the fix for the previous fix
+
+- [2026-10-28T19:25:46+07:00] perf: productivity is a paid DLC
